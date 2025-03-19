@@ -1,0 +1,947 @@
+Random Forest (Standardized, Dataset 1) Best Parameters: {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200}
+Random Forest (Standardized, Dataset 1) Performance:
+  Accuracy: 0.7319
+  Precision: 0.7515
+  Recall: 0.6714
+  F1 Score: 0.7092
+  ROC AUC: 0.7303
+Fitting 5 folds for each of 180 candidates, totalling 900 fits
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:528: FitFailedWarning: 
+525 fits failed out of a total of 900.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got l1 penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got elasticnet penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 71, in _check_solver
+    raise ValueError(
+ValueError: Only 'saga' solver supports elasticnet penalty, got solver=liblinear.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1203, in fit
+    raise ValueError("l1_ratio must be specified when penalty is elasticnet.")
+ValueError: l1_ratio must be specified when penalty is elasticnet.
+
+--------------------------------------------------------------------------------
+54 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'l2', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+28 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'elasticnet', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+41 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'l1', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+63 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l1', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+39 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l2', 'l1'} or None. Got 'none' instead.
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_search.py:1108: UserWarning: One or more of the test scores are non-finite: [       nan 0.72108593 0.721177   0.72121342 0.72121342 0.72121342
+        nan        nan        nan        nan        nan        nan
+        nan 0.72108593 0.721177   0.72121342 0.72121342 0.72121342
+        nan        nan        nan        nan        nan        nan
+        nan 0.72108593 0.721177   0.72121342 0.72121342 0.72121342
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72143195 0.72139553 0.72141374 0.72141374
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72143195 0.72139553 0.72141374 0.72143195
+        nan        nan        nan        nan        nan        nan
+        nan 0.72141374 0.72143195 0.72139553 0.72141374 0.72139553
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72146837 0.72146837 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72146837 0.72146837 0.72146837 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72146837 0.72146837 0.72150479 0.72148658
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72148658
+        nan        nan        nan        nan        nan        nan
+        nan 0.72150479 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72150479 0.72150479 0.72148658 0.72150479 0.721523
+        nan        nan        nan        nan        nan        nan
+        nan 0.72150479 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan]
+  warnings.warn(
+Logistic Regression (Standardized, Dataset 1) Best Parameters: {'C': 100, 'max_iter': 200, 'penalty': 'l2', 'solver': 'saga'}
+Logistic Regression (Standardized, Dataset 1) Performance:
+  Accuracy: 0.7244
+  Precision: 0.7494
+  Recall: 0.6521
+  F1 Score: 0.6974
+  ROC AUC: 0.7225
+Fitting 5 folds for each of 96 candidates, totalling 480 fits
+KNN (Standardized, Dataset 1) Best Parameters: {'algorithm': 'auto', 'n_neighbors': 15, 'p': 2, 'weights': 'uniform'}
+KNN (Standardized, Dataset 1) Performance:
+  Accuracy: 0.7190
+  Precision: 0.7174
+  Recall: 0.6979
+  F1 Score: 0.7075
+  ROC AUC: 0.7185
+
+Training models on normalized data (Dataset 1)...
+Fitting 5 folds for each of 108 candidates, totalling 540 fits
+Random Forest (Normalized, Dataset 1) Best Parameters: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}
+Random Forest (Normalized, Dataset 1) Performance:
+  Accuracy: 0.7322
+  Precision: 0.7516
+  Recall: 0.6724
+  F1 Score: 0.7098
+  ROC AUC: 0.7307
+Fitting 5 folds for each of 180 candidates, totalling 900 fits
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:528: FitFailedWarning: 
+525 fits failed out of a total of 900.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got l1 penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got elasticnet penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 71, in _check_solver
+    raise ValueError(
+ValueError: Only 'saga' solver supports elasticnet penalty, got solver=liblinear.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1203, in fit
+    raise ValueError("l1_ratio must be specified when penalty is elasticnet.")
+ValueError: l1_ratio must be specified when penalty is elasticnet.
+
+--------------------------------------------------------------------------------
+93 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'l2', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+28 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l1', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+33 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'elasticnet', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+39 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'l1', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+32 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l2', 'l1'} or None. Got 'none' instead.
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_search.py:1108: UserWarning: One or more of the test scores are non-finite: [       nan 0.71915562 0.71873677 0.71939235 0.71961088 0.71950162
+        nan        nan        nan        nan        nan        nan
+        nan 0.71915562 0.71873677 0.71939235 0.71961088 0.71950162
+        nan        nan        nan        nan        nan        nan
+        nan 0.71915562 0.71875498 0.71939235 0.71961088 0.71951983
+        nan        nan        nan        nan        nan        nan
+        nan 0.7210131  0.72106773 0.72088562 0.72094026 0.72104952
+        nan        nan        nan        nan        nan        nan
+        nan 0.7210131  0.72106773 0.72088562 0.72094026 0.72104952
+        nan        nan        nan        nan        nan        nan
+        nan 0.72097668 0.7210131  0.72088562 0.72094026 0.72104952
+        nan        nan        nan        nan        nan        nan
+        nan 0.72145016 0.72146837 0.72148658 0.7213409  0.72137732
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72145016 0.72148658 0.7213409  0.72137732
+        nan        nan        nan        nan        nan        nan
+        nan 0.72143195 0.72145016 0.72148658 0.7213409  0.72137732
+        nan        nan        nan        nan        nan        nan
+        nan 0.72146837 0.72150479 0.72148658 0.72148658 0.72148658
+        nan        nan        nan        nan        nan        nan
+        nan 0.72146837 0.72150479 0.72148658 0.72148658 0.72148658
+        nan        nan        nan        nan        nan        nan
+        nan 0.72146837 0.72150479 0.72148658 0.72148658 0.72148658
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan
+        nan 0.72148658 0.72150479 0.72148658 0.72150479 0.72150479
+        nan        nan        nan        nan        nan        nan]
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+Logistic Regression (Normalized, Dataset 1) Best Parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l1', 'solver': 'saga'}
+Logistic Regression (Normalized, Dataset 1) Performance:
+  Accuracy: 0.7244
+  Precision: 0.7494
+  Recall: 0.6521
+  F1 Score: 0.6974
+  ROC AUC: 0.7225
+Fitting 5 folds for each of 96 candidates, totalling 480 fits
+KNN (Normalized, Dataset 1) Best Parameters: {'algorithm': 'auto', 'n_neighbors': 15, 'p': 1, 'weights': 'uniform'}
+KNN (Normalized, Dataset 1) Performance:
+  Accuracy: 0.7200
+  Precision: 0.7185
+  Recall: 0.6989
+  F1 Score: 0.7086
+  ROC AUC: 0.7195
+
+Training models on standardized data (Dataset 2)...
+Fitting 5 folds for each of 108 candidates, totalling 540 fits
+Random Forest (Standardized, Dataset 2) Best Parameters: {'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 300}
+Random Forest (Standardized, Dataset 2) Performance:
+  Accuracy: 0.7408
+  Precision: 0.7602
+  Recall: 0.6832
+  F1 Score: 0.7197
+  ROC AUC: 0.7393
+Fitting 5 folds for each of 180 candidates, totalling 900 fits
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:528: FitFailedWarning: 
+525 fits failed out of a total of 900.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got l1 penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got elasticnet penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 71, in _check_solver
+    raise ValueError(
+ValueError: Only 'saga' solver supports elasticnet penalty, got solver=liblinear.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1203, in fit
+    raise ValueError("l1_ratio must be specified when penalty is elasticnet.")
+ValueError: l1_ratio must be specified when penalty is elasticnet.
+
+--------------------------------------------------------------------------------
+37 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l1', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+112 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'l2', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+27 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'l1', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+26 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'elasticnet', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+23 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l2', 'l1'} or None. Got 'none' instead.
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_search.py:1108: UserWarning: One or more of the test scores are non-finite: [       nan 0.72600285 0.72622137 0.72611213 0.72602107 0.72609392
+        nan        nan        nan        nan        nan        nan
+        nan 0.72602106 0.72620316 0.72611213 0.72602107 0.72609392
+        nan        nan        nan        nan        nan        nan
+        nan 0.72602106 0.72620316 0.72611213 0.72602107 0.7260757
+        nan        nan        nan        nan        nan        nan
+        nan 0.72622139 0.72616676 0.72636707 0.72633065 0.72633065
+        nan        nan        nan        nan        nan        nan
+        nan 0.72622139 0.72616676 0.72636707 0.72633065 0.72633065
+        nan        nan        nan        nan        nan        nan
+        nan 0.72618497 0.72616676 0.72636707 0.72633065 0.72631244
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72633065
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72633065
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72634886
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72634886
+        nan        nan        nan        nan        nan        nan
+        nan 0.72633065 0.72638528 0.72636707 0.72636707 0.72638528
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72636707
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72638528 0.72636707 0.72636707 0.72636707
+        nan        nan        nan        nan        nan        nan
+        nan 0.72638528 0.72638528 0.72636707 0.72636707 0.72636707
+        nan        nan        nan        nan        nan        nan
+        nan 0.72636707 0.72636707 0.72636707 0.72636707 0.72636707
+        nan        nan        nan        nan        nan        nan]
+  warnings.warn(
+Logistic Regression (Standardized, Dataset 2) Best Parameters: {'C': 10, 'max_iter': 200, 'penalty': 'l1', 'solver': 'saga'}
+Logistic Regression (Standardized, Dataset 2) Performance:
+  Accuracy: 0.7311
+  Precision: 0.7521
+  Recall: 0.6680
+  F1 Score: 0.7075
+  ROC AUC: 0.7295
+Fitting 5 folds for each of 96 candidates, totalling 480 fits
+KNN (Standardized, Dataset 2) Best Parameters: {'algorithm': 'auto', 'n_neighbors': 15, 'p': 1, 'weights': 'uniform'}
+KNN (Standardized, Dataset 2) Performance:
+  Accuracy: 0.7263
+  Precision: 0.7330
+  Recall: 0.6889
+  F1 Score: 0.7103
+  ROC AUC: 0.7253
+
+Training models on normalized data (Dataset 2)...
+Fitting 5 folds for each of 108 candidates, totalling 540 fits
+Random Forest (Normalized, Dataset 2) Best Parameters: {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100}
+Random Forest (Normalized, Dataset 2) Performance:
+  Accuracy: 0.7403
+  Precision: 0.7598
+  Recall: 0.6826
+  F1 Score: 0.7191
+  ROC AUC: 0.7389
+Fitting 5 folds for each of 180 candidates, totalling 900 fits
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py:528: FitFailedWarning: 
+525 fits failed out of a total of 900.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got l1 penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 63, in _check_solver
+    raise ValueError(
+ValueError: Solver lbfgs supports only 'l2' or None penalties, got elasticnet penalty.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1193, in fit
+    solver = _check_solver(self.solver, self.penalty, self.dual)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 71, in _check_solver
+    raise ValueError(
+ValueError: Only 'saga' solver supports elasticnet penalty, got solver=liblinear.
+
+--------------------------------------------------------------------------------
+75 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py", line 1203, in fit
+    raise ValueError("l1_ratio must be specified when penalty is elasticnet.")
+ValueError: l1_ratio must be specified when penalty is elasticnet.
+
+--------------------------------------------------------------------------------
+90 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l1', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+44 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'l2', 'elasticnet'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+60 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'elasticnet', 'l2', 'l1'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+15 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l1', 'elasticnet', 'l2'} or None. Got 'none' instead.
+
+--------------------------------------------------------------------------------
+16 fits failed with the following error:
+Traceback (most recent call last):
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_validation.py", line 866, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1382, in wrapper
+    estimator._validate_params()
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/base.py", line 436, in _validate_params
+    validate_parameter_constraints(
+  File "/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'penalty' parameter of LogisticRegression must be a str among {'l2', 'l1', 'elasticnet'} or None. Got 'none' instead.
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/Users/luddecmc/Desktop/SKOLARBETE-ITHS/repos/Medical-predictions-lab/.venv/lib/python3.12/site-packages/sklearn/model_selection/_search.py:1108: UserWarning: One or more of the test scores are non-finite: [       nan 0.7242182  0.7230345  0.7190282  0.71835439 0.7188461
+        nan        nan        nan        nan        nan        nan
+        nan 0.7242182  0.7230345  0.7190282  0.71835439 0.71886431
+        nan        nan        nan        nan        nan        nan
+        nan 0.7242182  0.72301629 0.7190282  0.71835439 0.71890073
+        nan        nan        nan        nan        nan        nan
+        nan 0.72643991 0.72640348 0.72563863 0.72569326 0.72556579
+        nan        nan        nan        nan        nan        nan
+        nan 0.72645812 0.72638527 0.72563863 0.72569326 0.72556579
+        nan        nan        nan        nan        nan        nan
+        nan 0.72645812 0.72640348 0.72563863 0.72569326 0.72554758
+        nan        nan        nan        nan        nan        nan
+        nan 0.72631244 0.72631244 0.72645813 0.72649455 0.72631244
+        nan        nan        nan        nan        nan        nan
+        nan 0.72631244 0.72627602 0.72645813 0.72649455 0.72631244
+        nan        nan        nan        nan        nan        nan
+        nan 0.72629423 0.72629423 0.72645813 0.72649455 0.72631244
+        nan        nan        nan        nan        nan        nan
+        nan 0.72638528 0.72638528 0.72638528 0.72638528 0.72634886
+        nan        nan        nan        nan        nan        nan
+        nan 0.72643991 0.72638528 0.72638528 0.72638528 0.72634886
+        nan        nan        nan        nan        nan        nan
+        nan 0.7264217  0.72638528 0.72638528 0.72638528 0.72634886
+        nan        nan        nan        nan        nan        nan
+        nan 0.72638528 0.72636707 0.7264217  0.72634886 0.72636707
+        nan        nan        nan        nan        nan        nan
+        nan 0.72638528 0.72636707 0.7264217  0.72634886 0.72636707
+        nan        nan        nan        nan        nan        nan
+        nan 0.72638528 0.72636707 0.7264217  0.72634886 0.72636707
+        nan        nan        nan        nan        nan        nan]
+  warnings.warn(
+Logistic Regression (Normalized, Dataset 2) Best Parameters: {'C': 1, 'max_iter': 100, 'penalty': 'l2', 'solver': 'liblinear'}
+Logistic Regression (Normalized, Dataset 2) Performance:
+  Accuracy: 0.7310
+  Precision: 0.7520
+  Recall: 0.6680
+  F1 Score: 0.7075
+  ROC AUC: 0.7294
+Fitting 5 folds for each of 96 candidates, totalling 480 fits
+KNN (Normalized, Dataset 2) Best Parameters: {'algorithm': 'auto', 'n_neighbors': 15, 'p': 2, 'weights': 'uniform'}
+KNN (Normalized, Dataset 2) Performance:
+  Accuracy: 0.7273
+  Precision: 0.7326
+  Recall: 0.6929
+  F1 Score: 0.7122
+  ROC AUC: 0.7264
