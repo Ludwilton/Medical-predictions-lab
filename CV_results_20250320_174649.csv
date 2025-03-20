@@ -1,0 +1,8 @@
+,Random forest,Logistic regression,KNN
+model,"RandomForestClassifier(max_depth=10, min_samples_leaf=4, min_samples_split=5,
+                       n_estimators=150)","LogisticRegression(C=1, penalty='l1', solver='saga')",KNeighborsClassifier(n_neighbors=50)
+params,"{'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 5, 'n_estimators': 150}","{'C': 1, 'penalty': 'l1', 'solver': 'saga'}","{'n_neighbors': 50, 'weights': 'uniform'}"
+accuracy,0.7373021268330582,0.7311838399533844,0.7234145867728464
+precision,0.7597263787943566,0.759141668491351,0.7435569755058573
+recall,0.6921129503407984,0.6751703992210322,0.6798442064264849
+f1,0.724345256292673,0.7146980004122861,0.7102746693794506

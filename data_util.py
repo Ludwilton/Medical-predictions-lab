@@ -2,6 +2,22 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.patches as mpatches
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import VotingClassifier
+from sklearn.model_selection import GridSearchCV
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score, recall_score, f1_score, ConfusionMatrixDisplay
+import numpy as np
+from datetime import datetime
+
+# dessa klasser är skrivna för att användas i en notebook, därav print statements och sådant, hårdkodade grejer, 
+# allt är byggt från början i en notebook sedan konverterad till en klass i denna fil. för att sedan kunna importeras i en annan notebook.
+# generellt, imo, ful kod men slipper iallafall kod i rapporten.
+# desto längre ner man kommer i dokumentet desto stökigare..
 
 # eda
 class EDA:
@@ -350,3 +366,248 @@ class Viz:
         plt.title('Correlation heatmap', fontsize=16)
         plt.tight_layout()
         plt.show()
+
+
+
+
+class MachineLearning:
+    def __init__(self, df):
+        self.results = {}
+        self.scaler = StandardScaler()
+        self.normalisation = MinMaxScaler()
+        self.df = df
+        
+
+    def read_and_split_data(self):
+        df = self.df
+        X, y = df.drop(columns=["cardio"]), df["cardio"]
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
+        X_test, X_val, y_test, y_val = train_test_split(X_test, y_test, test_size=0.5)
+        
+        self.X_train, self.X_test, self.X_val = X_train, X_test, X_val
+        self.y_train, self.y_test, self.y_val = y_train, y_test, y_val
+        
+        return (X_train, X_test, X_val, y_train, y_test, y_val)
+    
+    
+    def scale_and_normalize_data(self):
+        self.scaled_X_train = self.scaler.fit_transform(self.X_train)
+        self.scaled_X_test = self.scaler.transform(self.X_test)
+        self.scaled_X_val = self.scaler.transform(self.X_val)
+
+        self.norm_X_train = self.normalisation.fit_transform(self.scaled_X_train)
+        self.norm_X_test = self.normalisation.transform(self.scaled_X_test)
+        self.norm_X_val = self.normalisation.transform(self.scaled_X_val)
+        
+        return (self.norm_X_train, self.norm_X_test, self.norm_X_val)
+    
+    
+    def grid_search_cv(self, X_train, y_train, X_val, y_val, model, param_grid, model_name):
+        grid_search = GridSearchCV(
+            estimator=model,
+            param_grid=param_grid,
+            cv=5,
+            scoring="accuracy",
+            n_jobs=-1,
+            verbose=0
+        )
+
+        grid_search.fit(X_train, y_train)
+        
+        best_params = grid_search.best_params_
+        best_model = grid_search.best_estimator_
+        
+        y_pred = best_model.predict(X_val)
+        
+        accuracy = accuracy_score(y_val, y_pred)
+        precision = precision_score(y_val, y_pred)
+        recall = recall_score(y_val, y_pred)
+        f1 = f1_score(y_val, y_pred)
+        
+        return {
+            "model": best_model,
+            "params": best_params,
+            "accuracy": accuracy,
+            "precision": precision,
+            "recall": recall,
+            "f1": f1,
+        }
+    
+    
+    def run_grid_search_for_all_models(self):
+        rf_param_grid = {
+            "n_estimators": [100, 150, 200],
+            "max_depth": [5, 10, 20, None],
+            "min_samples_split": [2, 5],
+            "min_samples_leaf": [1, 2, 4, 8],
+        }
+
+        lr_param_grid = {
+            "penalty": ["l1", "l2", "elasticnet"],
+            "C": [0.01, 0.1, 1, 10, 100],
+            "solver": ["saga"],
+        }
+
+        knn_param_grid = {
+            "n_neighbors": [11, 15, 20, 25, 30, 50],
+            "weights": ["uniform", "distance"],
+        }
+        
+
+        rf = RandomForestClassifier()
+        lr = LogisticRegression()
+        knn = KNeighborsClassifier()
+        
+
+        self.results["Random forest"] = self.grid_search_cv(
+            self.norm_X_train,
+            self.y_train,
+            self.norm_X_val,
+            self.y_val,
+            rf,
+            rf_param_grid,
+            "Random Forest"
+        )
+        
+        self.results["Logistic regression"] = self.grid_search_cv(
+            self.norm_X_train,
+            self.y_train,
+            self.norm_X_val,
+            self.y_val,
+            lr,
+            lr_param_grid,
+            "Logistic Regression"
+        )
+
+        self.results["KNN"] = self.grid_search_cv(
+            self.norm_X_train, 
+            self.y_train, 
+            self.norm_X_val, 
+            self.y_val, 
+            knn, 
+            knn_param_grid, 
+            "KNN"
+        )
+
+        results_df = pd.DataFrame(self.results)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        results_df.to_csv(f"CV_results_{timestamp}.csv")
+        
+        return self.results, results_df
+    
+    def create_voting_classifier(self):
+        X_train, y_train = self.norm_X_train, self.y_train
+        X_test, y_test = self.norm_X_test, self.y_test
+        
+        vote_clf = VotingClassifier(
+            estimators=[
+                ("rf", self.results["Random forest"]["model"]),
+                ("lr", self.results["Logistic regression"]["model"]),
+                ("knn", self.results["KNN"]["model"])
+            ],
+            voting="hard"
+        )
+
+
+        vote_clf.fit(X_train, y_train)
+        y_pred = vote_clf.predict(X_test)
+        accuracy = accuracy_score(y_test, y_pred)
+        
+        return vote_clf, accuracy
+    
+    
+    def evaluate_model(self, model, X_train, X_val, X_test, y_train, y_val, y_test):
+        X_train_full = np.concatenate((X_train, X_val), axis=0)
+        y_train_full = np.concatenate((y_train, y_val), axis=0)
+        
+        model.fit(X_train_full, y_train_full)
+        y_pred = model.predict(X_test)
+
+        print(classification_report(y_test, y_pred))
+        cm = confusion_matrix(y_test, y_pred)
+        ConfusionMatrixDisplay(cm).plot()
+        plt.show()
+        
+        return {
+            "accuracy": accuracy_score(y_test, y_pred),
+            "precision": precision_score(y_test, y_pred),
+            "recall": recall_score(y_test, y_pred),
+            "f1": f1_score(y_test, y_pred),
+        }
+        
+    def run_full_pipeline(self):
+        self.read_and_split_data()
+        self.scale_and_normalize_data()
+        self.run_grid_search_for_all_models()
+        vote_clf, vote_accuracy = self.create_voting_classifier()
+        
+        print("Evaluating best Random Forest model on test set:")
+        evaluation_results = self.evaluate_model(
+            self.results["Random forest"]["model"], 
+            self.norm_X_train,
+            self.norm_X_val, 
+            self.norm_X_test, 
+            self.y_train,
+            self.y_val, 
+            self.y_test
+        )
+        
+        return self.results, vote_clf, evaluation_results
+
+
+        # börjar få ont om tid här..
+    def classification_report(self): # snuskig snabb lösning för notebook..
+        model = self.results["Random forest"]["model"]
+        X_train = self.norm_X_train
+        X_val = self.norm_X_val
+        X_test = self.norm_X_test
+        y_train = self.y_train
+        y_val = self.y_val
+        y_test = self.y_test
+        
+        X_train_full = np.concatenate((X_train, X_val), axis=0)
+        y_train_full = np.concatenate((y_train, y_val), axis=0)
+        
+        model.fit(X_train_full, y_train_full)
+        y_pred = model.predict(X_test)
+
+        print(classification_report(y_test, y_pred))
+        
+        
+    def confusion_matrix(self):         # och här..
+        model = self.results["Random forest"]["model"]
+        X_train = self.norm_X_train
+        X_val = self.norm_X_val
+        X_test = self.norm_X_test
+        y_train = self.y_train
+        y_val = self.y_val
+        y_test = self.y_test
+        
+        X_train_full = np.concatenate((X_train, X_val), axis=0)
+        y_train_full = np.concatenate((y_train, y_val), axis=0)
+        
+        model.fit(X_train_full, y_train_full)
+        y_pred = model.predict(X_test)
+        cm = confusion_matrix(y_test, y_pred)
+        ConfusionMatrixDisplay(cm).plot()
+        plt.show()
+    
+    
+    
+# fixat denna print lite med GPT så att den inte går sönder utan ha kört modeller först.
+    def __str__(self): 
+        if not hasattr(self, 'results') or not self.results:
+            return "No models have been trained yet."
+        
+        best_model = max(self.results.items(), key=lambda x: x[1]['accuracy'])
+        model_name, model_info = best_model
+        
+        return f"Best model after Gridsearch Results:\n" \
+               f"Best model: {model_name}\n" \
+               f"Accuracy: {model_info['accuracy']:.4f}\n" \
+               f"Precision: {model_info['precision']:.4f}\n" \
+               f"Recall: {model_info['recall']:.4f}\n" \
+               f"F1 Score: {model_info['f1']:.4f}\n" \
+               f"Best parameters: {model_info['params']}"
+
